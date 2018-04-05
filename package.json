@@ -1,0 +1,21 @@
+{
+  "name": "granular-coding-round",
+  "version": "1.0.0",
+  "description": "Coding round solutions.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rewanth1997/granular-coding-round.git"
+  },
+  "dependencies": {
+    "command-line-args": "5.0.2",
+    "command-line-usage": "5.0.4",
+    "great-circle": "^0.2.8",
+    "logger": "0.0.1",
+    "mocha": "^5.0.5",
+    "node-fetch": "^2.1.2",
+    "winston": "^2.4.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

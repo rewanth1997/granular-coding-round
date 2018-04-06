@@ -4,6 +4,7 @@
 const assert = require('assert');
 const findFriendsInRadius = require('../Question-2/findFriendsInRadius');
 
+// Test cases on locations in north latitude and east longitude within small radius.
 describe('Question 2', function() {
     const input = [
         {"latitude": "16.257447", "longitude": "80.440844", "user_id": 9, "name": "Place 1"},
@@ -48,6 +49,7 @@ describe('Question 2', function() {
    
 });
 
+// Test cases on locations in north latitude and east longitude within larger radius.
 describe('Question 2', function() {
     const input = [
         {"latitude": "16.257447", "longitude": "80.440844", "user_id": 9, "name": "Place 1"},
@@ -89,6 +91,7 @@ describe('Question 2', function() {
 
 });
 
+// Test cases on locations in north latitude, east longitude and south latitude, west longitude.
 describe('Question 2', function() {
     const input = [
         {"latitude": "-16.257447", "longitude": "-80.440844", "user_id": 9, "name": "Place 1"},
@@ -127,6 +130,7 @@ describe('Question 2', function() {
 
 });
 
+// Test cases mixed geographical locations.
 describe('Question 2', function() {
     const input = [
         {"latitude": "-16.257447", "longitude": "80.440844", "user_id": 9, "name": "Place 1"},
@@ -171,6 +175,7 @@ describe('Question 2', function() {
 
 });
 
+// Edge test cases.
 describe('Question 2', function() {
     const input = [
         {"latitude": "16.257447", "longitude": "80.440844", "user_id": 9, "name": "Place 1"},
@@ -187,12 +192,14 @@ describe('Question 2', function() {
     };
     const radius = 0;
 
+    // Radius is 0 i.e no one is invited.
     it('edge case 1', function() {
         assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
 
         });
     });
 
+    // partyCoordinates are same as one of the friends coordinates.
     it('edge case 2', function() {
         assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates1), {
              "8": "Place 3"

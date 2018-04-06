@@ -4,6 +4,7 @@
 const assert = require('assert');
 const findTriplet = require('../Question-1/findTriplet');
 
+// Test case with only positive integers.
 describe('Question 1', function() {
     const arr = [1, 2, 3, 4, 5];
     const sum = 9;
@@ -13,6 +14,7 @@ describe('Question 1', function() {
     });
 });
 
+// Test case with multiple outputs but only first return value is considered.
 describe('Question 1', function() {
     const arr = [0, 0, 0, -3, 3];
     const sum = 0;
@@ -22,6 +24,7 @@ describe('Question 1', function() {
     });
 });
 
+// Test case with floating point values.
 describe('Question 1', function() {
     const arr = [1, 3, 2, 3, 4.5];
     const sum = 9.5;
@@ -31,6 +34,7 @@ describe('Question 1', function() {
     });
 });
 
+// Test case with negative floating point values.
 describe('Question 1', function() {
     const arr = [-1, 3, -2, -3, -4.5];
     const sum = -9.5;
@@ -40,6 +44,7 @@ describe('Question 1', function() {
     });
 });
 
+// Test case with mixed combination.
 describe('Question 1', function() {
     const arr = [-1, 3, 0, -3, -4.5];
     const sum = 13;
@@ -49,6 +54,7 @@ describe('Question 1', function() {
     });
 });
 
+// Test case with array size less than 3.
 describe('Question 1', function() {
     const arr = [-1, 3.5];
     const sum = 9;
@@ -58,6 +64,7 @@ describe('Question 1', function() {
     });
 });
 
+// Test case with positive integers but no triplets.
 describe('Question 1', function() {
     const arr = [12, 12, 12, 34, 90];
     const sum = 24;
@@ -67,7 +74,7 @@ describe('Question 1', function() {
     });
 });
 
-
+// Test case with large input values.
 describe('Question 1', function() {
     const arr = [12, 35, 134, 46236, 5632, -983, 23794, 123];
     const sum = 23952;
@@ -77,7 +84,7 @@ describe('Question 1', function() {
     });
 });
 
-
+// Test case with positive integers and negative sum.
 describe('Question 1', function() {
     const arr = [55, 34, 98, 23, 12, 90];
     const sum = -100;
@@ -87,6 +94,7 @@ describe('Question 1', function() {
     });
 });
 
+// Test case with an empty array.
 describe('Question 1', function() {
     const arr = [];
     const sum = 13;

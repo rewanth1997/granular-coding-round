@@ -91,6 +91,88 @@ describe('Question 2', function() {
 
 describe('Question 2', function() {
     const input = [
+        {"latitude": "-16.257447", "longitude": "-80.440844", "user_id": 9, "name": "Place 1"},
+        {"latitude": "16.473541", "longitude": "80.655077", "user_id": 19, "name": "Place 2"},
+        {"latitude": "-16.246899", "longitude": "-80.462816", "user_id": 8, "name": "Place 3"},
+        {"latitude": "17.225335", "longitude": "80.155199", "user_id": 18, "name": "Place 4"},
+        {"latitude": "17.359603", "longitude": "78.485277", "user_id": 6, "name": "Place 5"}
+    ];
+    const partyCoordinates = {
+        "latitude": "16.399780",
+        "longitude": "80.589159"
+    };
+    let radius = 100;
+
+    it('case 6', function() {
+        assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
+            "19": "Place 2"
+        });
+    });
+
+    radius = 50;
+
+    it('case 7', function() {
+        assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
+            "19": "Place 2"
+        });
+    });
+
+    radius = -50;
+
+    it('case 8', function() {
+        assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
+            "19": "Place 2"
+        });
+    });
+
+});
+
+describe('Question 2', function() {
+    const input = [
+        {"latitude": "-16.257447", "longitude": "80.440844", "user_id": 9, "name": "Place 1"},
+        {"latitude": "16.473541", "longitude": "-80.655077", "user_id": 19, "name": "Place 2"},
+        {"latitude": "16.246899", "longitude": "-80.462816", "user_id": 8, "name": "Place 3"},
+        {"latitude": "-17.225335", "longitude": "80.155199", "user_id": 18, "name": "Place 4"},
+        {"latitude": "17.359603", "longitude": "78.485277", "user_id": 6, "name": "Place 5"}
+    ];
+    const partyCoordinates = {
+        "latitude": "16.399780",
+        "longitude": "80.589159"
+    };
+    let radius = 100;
+
+    it('case 9', function() {
+        assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
+            "6": "Place 5",
+            "9": "Place 1",
+            "18": "Place 4"
+        });
+    });
+
+    radius = 50;
+
+    it('case 10', function() {
+        assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
+            "6": "Place 5",
+            "9": "Place 1",
+            "18": "Place 4"
+        });
+    });
+
+    radius = 5000;
+
+    it('case 11', function() {
+        assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
+            "6": "Place 5",
+            "9": "Place 1",
+            "18": "Place 4"
+        });
+    });
+
+});
+
+describe('Question 2', function() {
+    const input = [
         {"latitude": "16.257447", "longitude": "80.440844", "user_id": 9, "name": "Place 1"},
         {"latitude": "16.473541", "longitude": "80.655077", "user_id": 19, "name": "Place 2"},
         {"latitude": "16.246899", "longitude": "80.462816", "user_id": 8, "name": "Place 3"}

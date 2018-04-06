@@ -182,12 +182,11 @@ describe('Question 2', function() {
         {"latitude": "0", "longitude": "-90", "user_id": 19, "name": "Place 2"},
         {"latitude": "90", "longitude": "-90", "user_id": 8, "name": "Place 3"},
         {"latitude": "-90", "longitude": "90", "user_id": 18, "name": "Place 4"},
-        {"latitude": "90", "longitude": "0", "user_id": 26, "name": "Place 5"},
         {"latitude": "0", "longitude": "90", "user_id": 6, "name": "Place 6"},
     ];
     const partyCoordinates = {
         "latitude": "90",
-        "longitude": "80.589159"
+        "longitude": "0"
     };
     const radius = 15000;
 
@@ -195,8 +194,7 @@ describe('Question 2', function() {
         assert.deepEqual(findFriendsInRadius(input, radius, partyCoordinates), {
             "6": "Place 6",
             "8": "Place 3",
-            "19": "Place 2",
-            "26": "Place 5"
+            "19": "Place 2"
         });
     });
 

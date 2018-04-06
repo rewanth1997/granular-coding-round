@@ -13,10 +13,10 @@ module.exports = function(input, radius, partyCoordinates) {
         // Takes two sets of geographic coordinates in decimal degrees and produces
         // distance along the great circle line.
         const distance = greatCircle.distance(partyCoordinates["latitude"],
-                                            partyCoordinates["longitude"],
-                                            entity["latitude"],
-                                            entity["longitude"],
-                                            "KM");
+                                              partyCoordinates["longitude"],
+                                              entity["latitude"],
+                                              entity["longitude"],
+                                              "KM");
 
         // List of friends to be invited wihtin 100km radius of partyCoordinates.
         if(distance <= radius) {

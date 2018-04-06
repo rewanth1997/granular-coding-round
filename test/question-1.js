@@ -45,7 +45,7 @@ describe('Question 1', function() {
     const sum = 13;
 
     it('case 5', function() {
-        assert.deepEqual(findTriplet(arr, sum), false);
+        assert.deepEqual(findTriplet(arr, sum), []);
     });
 });
 
@@ -54,7 +54,7 @@ describe('Question 1', function() {
     const sum = 9;
 
     it('case 6', function() {
-        assert.deepEqual(findTriplet(arr, sum), false);
+        assert.deepEqual(findTriplet(arr, sum), []);
     });
 });
 
@@ -63,7 +63,7 @@ describe('Question 1', function() {
     const sum = 24;
 
     it('case 7', function() {
-        assert.deepEqual(findTriplet(arr, sum), false);
+        assert.deepEqual(findTriplet(arr, sum), []);
     });
 });
 
@@ -83,7 +83,7 @@ describe('Question 1', function() {
     const sum = -100;
 
     it('case 9', function() {
-        assert.deepEqual(findTriplet(arr, sum), false);
+        assert.deepEqual(findTriplet(arr, sum), []);
     });
 });
 
@@ -92,6 +92,6 @@ describe('Question 1', function() {
     const sum = 13;
 
     it('case 10', function() {
-        assert.deepEqual(findTriplet(arr, sum), false);
+        assert.deepEqual(findTriplet(arr, sum), []);
     });
 });

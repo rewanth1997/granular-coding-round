@@ -26,5 +26,5 @@ module.exports = function findTriplet(arr, sum)
         }
     }
 
-    return false;
+    return [];
 }

@@ -39,12 +39,11 @@ try {
     logger.info(`Given array of digits = ${arr}`);
     logger.info(`Given sum = ${sum}`);
 
-    if(triplets == false) {
+    if(triplets.length == 0) {
         logger.info("No triplets found.");
     }
     else {
         logger.info(`Triplets are ${triplets}`);
-        // logger.info(`${triplets}`);
     }    
 } catch (err) {
     // Exception found
